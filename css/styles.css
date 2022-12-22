@@ -14,6 +14,10 @@
   --subtle-text: #8e8f99;
   --accent: #e7e9fc;
   --light: #f4f4fd;
+
+  /* Animation */
+  --anim-fast: 300ms ease;
+  --anim-slow: 750ms ease-out;
 }
 
 body {
@@ -629,6 +633,8 @@ footer {
   height: 100%;
 
   background-color: rgba(46, 47, 66, 0.4);
+
+  transition: visibility var(--anim-fast), opacity var(--anim-fast);
 }
 
 .backdrop.is-hidden {
@@ -649,6 +655,13 @@ footer {
 
   width: 408px;
   min-height: 576px;
+
+  transition: opacity var(--anim-fast), transform var(--anim-fast);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -70%);
+  opacity: 0;
 }
 
 .modal-btn {
