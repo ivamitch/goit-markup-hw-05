@@ -124,7 +124,11 @@ img {
   position: relative;
 }
 
-.current::after {
+.current {
+  color: #404BBF;
+}
+
+.nav-link.current::after {
   /* content: '';
   display: block;
   width: 100%;
